@@ -46,4 +46,36 @@ function printArticles(){
     newItem.classList.add('row');
     newItem.classList.add('p-1');
     newItem.setAttribute('id', index);
+    //Creating checkbox
+    const checkboxContainer = document.createElement('div');
+    checkboxContainer.classList.add('col-1');
+    checkboxContainer.classList.add('d-flex');
+    checkboxContainer.classList.add('justify-content-center');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = 'true';
+    checkbox.setAttribute('name', 'ingredient');
+    checkbox.classList.add('checkbox-ingredient');
+    checkbox.addEventListener('change');
+    checkbox.setAttribute('id', index);
+    checkboxContainer.appendChild(checkbox);
+
+    //Creating input quantity
+
+    const counterData = document.createElement('input');
+    counterData.type = 'number';
+    counterData.setAttribute('name', 'quantity-ingredient');
+    counterData.setAttribute('name', 'quantity-ingredient');
+    counterData.addEventListener('keyup');
+    counterData.addEventListener('change');
+    counterData.classList.add('counter-data');
+    counterData.classList.add('d-flex');
+    counterData.classList.add('text-center');
+    counterData.classList.add('col-1');
+    counterData.classList.add('border');
+    counterData.classList.add('p-0');
+    counterData.value = ingredient.items;
+    counterData.setAttribute('id', index);
+
   });
+}
