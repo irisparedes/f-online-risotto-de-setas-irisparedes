@@ -158,6 +158,7 @@ function addAllIngredients(){
   for(let i = 0; i < checkboxList.length; i++){
     ingredients[i].items = 1;
     inputQuantityList[i].value = ingredients[i].items;
+    checkboxList[i].checked = true;
   }
   updatePurchaseData();
 }
@@ -168,6 +169,7 @@ function removeAllIngredients(){
   for(let i = 0; i < checkboxList.length; i++){
     ingredients[i].items = 0;
     inputQuantityList[i].value = ingredients[i].items;
+    checkboxList[i].checked = false;
   }
   updatePurchaseData();
 }
