@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link
-  rel="icon"
-  href="shoppingbasket.jpg"
-  />
-  <link
-  rel="stylesheet"
-  href="assets/css/main.css"
-  />
-  <link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-  crossorigin="anonymous"
-  />
-  <title>Prueba técnica 5 "Risotto de setas" Iris Paredes</title>
-</head>
+    <link
+    rel="icon"
+    href="shoppingbasket.jpg"
+    />
+    <link
+    rel="stylesheet"
+    href="assets/css/main.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous"
+    />
+    <title>Prueba técnica 5 "Risotto de setas" Iris Paredes</title>
+  </head>
 <body>
-  <!-- revisar si necesito utilizar los parciales -->
-  <div class="page">
-    <partial src="_header.html" label="Header"></partial>
-    <partial src="_main.html" label="Main"></partial>
-    <partial src="_link.html" aClass="link__adalab" text="Adalab" url="https://adalab.es"></partial>
-    <partial src="_link.html" aClass="link__github" text="GitHub" url="https://github.com"></partial>
+  <div class="m-5">
+    <header class="container p-0">
+            <p class="m-0 text-uppercase text-secondary"><small>Ingredientes</small></p>
+            <h1 class="main-title card-subtitle font-weight-bold"></h1>
+                <div class="row m-0 mt-3">
+                        <button type="button" class="btn btn-link p-0 button-select">Seleccionar todo</button>
+                        <span class="pl-1 pr-1">|</span>
+                        <button type="button" class="btn btn-link p-0 button-unselect">Deseleccionar todo</button>
+                </div>
+    </header>
+    <main class="container">
+      <ul class="container list-group list-ingredients p-0"></ul>
+      <div class="container mt-5">
+        <div class="row">
+            <p class="small text-secondary">Items: </p>
+            <p class="number-items small font-weight-bold pl-2"></p>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <p class="text-secondary">Subtotal: </p>
+            <p class="subtotal"></p>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <p class="text-secondary">Gastos de envío: </p>
+            <p class="delivery"></p>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <p class="font-weight-bold h4">Total: </p>
+            <p class="total text-success font-weight-bold h3"></p>
+        </div>
+        <div class="row">
+            <button class="submit__purchase-button btn btn-success btn-lg btn-block d-flex justify-content-center align-items-center mt-4">
+                <p class="h3">Comprar ingredientes: </p>
+                <p class="submit__purchase-amount pl-2 h3"></p>
+            </button>
+        </div>
+      </div>
+    </main>
   </div>
 
-    <div class="m-5">
-      <header class="container p-0">
-              <p class="m-0 text-uppercase text-secondary"><small>Ingredientes</small></p>
-              <h1 class="main-title card-subtitle font-weight-bold"></h1>
-                  <div class="row m-0 mt-3">
-                          <button type="button" class="btn btn-link p-0 button-select">Seleccionar todo</button>
-                          <span class="pl-1 pr-1">|</span>
-                          <button type="button" class="btn btn-link p-0 button-unselect">Deseleccionar todo</button>
-                  </div>
-      </header>
-      <main class="container">
-          <ul class="container list-group list-ingredients p-0"></ul>
-          <div class="container mt-5">
-                  <div class="row">
-                      <p class="small text-secondary">Items: </p>
-                      <p class="number-items small font-weight-bold pl-2"></p>
-                  </div>
-                  <div class="row d-flex justify-content-between">
-                      <p class="text-secondary">Subtotal: </p>
-                      <p class="subtotal"></p>
-                  </div>
-                  <div class="row d-flex justify-content-between">
-                      <p class="text-secondary">Gastos de envío: </p>
-                      <p class="delivery"></p>
-                  </div>
-                  <div class="row d-flex justify-content-between">
-                      <p class="font-weight-bold h4">Total: </p>
-                      <p class="total text-success font-weight-bold h3"></p>
-                  </div>
-                  <div class="row">
-                      <button class="submit__purchase-button btn btn-success btn-lg btn-block d-flex justify-content-center align-items-center mt-4">
-                          <p class="h3">Comprar ingredientes: </p>
-                          <p class="submit__purchase-amount pl-2 h3"></p>
-                      </button>
-                  </div>
-          </div>
-      </main>
-  </div>
-  </body>
-  </html>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
