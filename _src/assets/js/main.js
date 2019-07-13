@@ -76,6 +76,47 @@ function printArticles(){
     counterData.classList.add('p-0');
     counterData.value = ingredient.items;
     counterData.setAttribute('id', index);
+    //Creating product data
+    const ingredientDataContainer = document.createElement('div');
+    ingredientDataContainer.classList.add('ingredient-data-container');
+    ingredientDataContainer.classList.add('col-8');
 
+    const nameIngredient = document.createElement('p');
+    nameIngredient.classList.add('m-0');
+    nameIngredient.classList.add('font-weight-bold');
+    nameIngredient.innerHTML = ingredient.product;
+
+    const brandIngredient = document.createElement('p');
+    brandIngredient.classList.add('m-0');
+    brandIngredient.classList.add('text-secondary');
+    brandIngredient.classList.add('small');
+    brandIngredient.innerHTML = ingredient.brand || '';
+
+    const quantityIngredient = document.createElement('p');
+    quantityIngredient.classList.add('m-0');
+    quantityIngredient.classList.add('small');
+    quantityIngredient.innerHTML = ingredient.quantity;
+    //Creating price
+    const priceContainer = document.createElement('div');
+    priceContainer.classList.add('price-container');
+    priceContainer.classList.add('col-2');
+    priceContainer.classList.add('d-flex');
+    priceContainer.classList.add('justify-content-center');
+    priceContainer.classList.add('align-self-center');
+
+    const priceIngredient = document.createElement('p');
+    priceIngredient.classList.add('price-item');
+    priceIngredient.classList.add('text-success');
+    priceIngredient.classList.add('font-weight-bold');
+    priceIngredient.innerHTML = ingredient.price + '€';
+    priceContainer.appendChild(priceIngredient);
+    //Putting elements inside anothers
+    ingredientDataContainer.append(nameIngredient, brandIngredient, quantityIngredient);
+    newItem.append(checkboxContainer, counterData, ingredientDataContainer, priceContainer);
+    listIngredients.appendChild(newItem);
   });
+checkboxList = document.querySelectorAll('.checkbox-ingredient');
+inputQuantityList = document.querySelectorAll('.counter-data');
+itemPriceList = document.querySelectorAll('.price-item');
+
 }
